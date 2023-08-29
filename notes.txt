@@ -1,0 +1,24 @@
+Manifest Version
+The manifest version is the version the extension will use and it is used to ensure compatibility between the extension and the browser. This lab will use version 2, which enables special features without having to do any extra configuration.
+
+Permissions
+The permissions attribute is an array of strings, where each string specifies a permission that the extension requires to function correctly. These permissions can include access to specific URLs, tabs, or other resources that the extension needs in order to work.
+
+Content Scripts
+The content_scripts are scripts that are injected into web pages by a browser extension to modify or add functionality to the page. They are specified in the manifest file of the extension under the content_scripts property, which is an array of objects that define the content scripts to be injected. For this lab, there only needs 1 object which has the following properties:
+
+matches: This is an array of strings that specify the URLs of the pages where the content script will be injected. The strings can use wildcards and regular expressions to match multiple pages.
+js: This is an array of strings that specify the JavaScript files to be injected into the page. The JavaScript files can be local to the extension or external URLs.
+Browser Action
+The browser_action property is used to define the appearance and behavior of the extension’s button in the browser’s toolbar, as well as control the popup thats shown for the extension (the front-end user interface for the extension). This lab’s browser_action property is an object that has the following properties:
+
+default_title: This is a string that specifies the default title for the button, which is displayed as a tooltip when the user hovers over the button.
+default_popup: This is a string that specifies location of the .html file to be shown when the user clicks on the button.
+Background
+The background property is used to define the background script of the extension, which is a script that runs in the background of the browser and performs long-running tasks or functions that are not associated with a specific page. This lab’s background property is an object that has the following properties:
+
+scripts: This is an array of strings that specify the JavaScript files that make up the background script. The files can be local to the extension or external URLs.
+
+The browser.tabs.query() function is a way to get information about tabs in a browser extension. When you call the query() function, you can specify certain criteria, such as which tabs you want to get information about. In this lab, it’s used to get information from the active tab in the current window.
+
+When the query() function is called, it returns a list of tabs that match the criteria specified. Each tab in the list has some information about it, such as its name, URL, and what window it is in. In this example, tabs[0] is the current active tab on the page (a.k.a the current twitter page). This is then used to send a message to the content script to let it know the sentiments need to be reset.
