@@ -1,6 +1,6 @@
 # Chrome Extension for Twitter Sentiment Analysis
 
-![Twitter Sentiment Analysis](https://raw.githubusercontent.com/mainak0907/ChromeExtenion-TwitterSentimentAnalysis/main/images/screenshot.png)
+<img width="941" alt="image" src="https://github.com/mainak0907/ChromeExtenion-TwitterSentimentAnalysis/assets/88925745/67b572d2-d732-4f67-9956-f1debc049fcf">
 
 The Chrome Extension for Twitter Sentiment Analysis is a tool that allows users to analyze the sentiment of tweets directly from their Twitter feed. This extension utilizes Natural Language Processing (NLP) techniques to determine whether a tweet has a positive, negative, or neutral sentiment.
 
